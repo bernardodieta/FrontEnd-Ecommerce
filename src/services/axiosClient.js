@@ -1,9 +1,10 @@
 import axios from "axios";
+import { getHeader } from "@/utils/utils.js";
 
 export default class AxiosClient {
 
     getRequest = ({ url, config, callbackSuccess, callbackError }) => {
-        axios.get(url, config)
+        axios.get(url, { ...config, ...getHeader() })
             .then(response => {
                 console.log('Respuesta GET:', response);
                 if (callbackSuccess) callbackSuccess(response);
@@ -15,7 +16,7 @@ export default class AxiosClient {
     }
 
     postRequest = ({ url, body, config, callbackSuccess, callbackError }) => {
-        axios.post(url, body, config)
+        axios.post(url, body, { ...config, ...getHeader() })
             .then(response => {
                 console.log('Respuesta POST:', response);
                 if (callbackSuccess) callbackSuccess(response);
@@ -27,7 +28,7 @@ export default class AxiosClient {
     }
 
     putRequest = ({ url, body, config, callbackSuccess, callbackError }) => {
-        axios.put(url, body, config)
+        axios.put(url, body, { ...config, ...getHeader() })
             .then(response => {
                 console.log('Respuesta PUT:', response);
                 if (callbackSuccess) callbackSuccess(response);
@@ -39,7 +40,7 @@ export default class AxiosClient {
     }
 
     deleteRequest = ({ url, config, callbackSuccess, callbackError }) => {
-        axios.delete(url, config)
+        axios.delete(url, { ...config, ...getHeader() })
             .then(response => {
                 console.log('Respuesta DELETE:', response);
                 if (callbackSuccess) callbackSuccess(response);

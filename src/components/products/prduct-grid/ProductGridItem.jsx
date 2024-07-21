@@ -14,7 +14,7 @@ export const ProductGridItem = ({ product }) => {
                 <div className="flex flex-col justify-around h-full">
                     <Image
                         alt="asd"
-                        src={`http://localhost:8080/${product.img[0].path}`}
+                        src={`https://ecommerce-fullbackend-production.up.railway.app/${product.img[0].path}`}
                         className="h-auto w-auto object-contain max-h-32 mx-auto"
                         width={200}
                         height={200}

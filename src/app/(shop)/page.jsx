@@ -6,7 +6,7 @@ import { useStore } from 'zustand';
 import { usersStore } from '@/store/ui/user-store';
 import verifyAuthStatus from './api/user.js'
 
-const Home = () =>  {
+const Home = () => {
   const [products, setProducts] = useState([]);
 
   const loadUser = useStore(usersStore, (state) => state.loadUser);

@@ -1,9 +1,10 @@
 'use client'
 import UserRegister from '@/components/user/UserRegister'
-
-export default function () {
+const PageUser = () =>  {
     return (
         <UserRegister />
     )
 
 }
+PageUser.displayName = 'PageUser'
+export default PageUser

@@ -1,15 +1,14 @@
 'use client';
 import { useEffect } from 'react';
-import verifyAuthStatus from '@/api/user';
+
 import Link from "next/link"
 
 
 
-export default function () {
+const AdminPage = () => {
     useEffect(() => {
         const fetchCart = async () => {
-            //const data = await verifyAuthStatus();
-            console.log(data);
+
         };
         fetchCart();
     }, []);
@@ -38,3 +37,7 @@ export default function () {
         </div>
     )
 }
+
+AdminPage.displayName = 'AdminPage'
+
+export default AdminPage

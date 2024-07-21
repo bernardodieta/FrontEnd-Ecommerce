@@ -5,7 +5,7 @@ import { usersStore } from '@/store/ui/user-store';
 import verifyAuthStatus from './api/user.js'
 import { useEffect, useState } from "react";
 
-export default function ({ children }) {
+const LayOutPage =  ({ children }) => {
     const loadUser = useStore(usersStore, (state) => state.loadUser);
     const isAuthenticated = useStore(usersStore, (state) => state.isAuthenticated);
 
@@ -26,3 +26,5 @@ export default function ({ children }) {
         </main>
     )
 }
+LayOutPage.displayName = 'LayOutPage'
+export default LayOutPage

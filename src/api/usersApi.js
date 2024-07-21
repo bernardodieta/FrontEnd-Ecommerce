@@ -2,7 +2,7 @@ import axios from "axios";
 
 const axiosConfig = {
     withCredentials: true,
-    baseURL: 'http://localhost:8080/api/'
+    baseURL: 'https://ecommerce-fullbackend-production.up.railway.app/api/'
 };
 
 export const usersApi = axios.create(axiosConfig);

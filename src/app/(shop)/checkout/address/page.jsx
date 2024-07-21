@@ -1,6 +1,8 @@
 import AddressForm from "@/components/ui/address/AddressAdd"
 import { AddressList } from "@/components/ui/address/AddressList"
-export default function () {
+
+
+const CheckOutAddressPage =  () => {
     return (
         <div className="flex w-4/5 mx-auto">            
             <AddressList />
@@ -8,3 +10,5 @@ export default function () {
         </div>
     )
 }
+CheckOutAddressPage.displayName = 'CheckOutAddressPage'
+export default CheckOutAddressPage

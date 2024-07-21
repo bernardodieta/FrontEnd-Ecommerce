@@ -15,7 +15,7 @@ export default class PaymentServices {
     createPaymentIntent = ({ orderId, callbackSuccess, callbackError }) => {
         console.log('Creating payment intent...');
         const requestInfo = {
-            url: `http://localhost:8080/api/payment-intents?id=${orderId}`,
+            url: `https://ecommerce-fullbackend-production.up.railway.app/api/payment-intents?id=${orderId}`,
             config: getHeader(),
             callbackSuccess: (response) => {
                 console.log('Response from createPaymentIntent:', response);
@@ -33,7 +33,7 @@ export default class PaymentServices {
     }
 
     pay = ({ body, callbackSuccess, callbackError }) => {
-        const requestInfo = { url: `http://localhost:8080/api/checkout`, body, config: getHeader(), callbackSuccess, callbackError }
+        const requestInfo = { url: `https://ecommerce-fullbackend-production.up.railway.app/api/checkout`, body, config: getHeader(), callbackSuccess, callbackError }
         this.client.postRequest(requestInfo);
     }
 }

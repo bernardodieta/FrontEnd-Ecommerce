@@ -1,6 +1,6 @@
 import Checkout from "@/components/payment/Checkout"
 
-export default function () {
+const CheckOut =  () => {
     return (
         <div>
             <h1>Checkout Page</h1>
@@ -8,3 +8,7 @@ export default function () {
         </div>
     )
 }
+
+CheckOut.displayName = 'CheckOut'
+
+export default CheckOut

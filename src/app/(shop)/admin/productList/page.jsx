@@ -1,11 +1,14 @@
 import Link from "next/link";
 
-export default function () {
+const AdminProductList = () => {
     return (
-        <div>   
+        <div>
             <Link href='/admin/addProduct'>Vender un Producto</Link>
             <Link href='/admin/productList'>Administrar todos los productos</Link>
             <Link href='/admin/productList'>Administrar todos los productos</Link>
         </div>
     )
 }
+
+AdminProductList.displayName = 'AdminProductList'
+export default AdminProductList

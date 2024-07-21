@@ -9,11 +9,11 @@ export const Address = ({ address, onUpdate }) => {
 
     const handleToggle = () => {
         setIsExpanded(!isExpanded);
-        setEditable(false); // Asegurarse de desactivar el modo de edición al colapsar
+        setEditable(false); 
     };
 
     const handleEdit = (e) => {
-        e.stopPropagation(); // Evitar que el evento llegue al padre y colapse
+        e.stopPropagation();
         setEditable(true);
     };
 
@@ -23,22 +23,22 @@ export const Address = ({ address, onUpdate }) => {
     };
 
     const handleSave = async (e) => {
-        e.stopPropagation(); // Evitar que el evento llegue al padre y colapse
+        e.stopPropagation(); 
         try {
             const response = await usersApi.put(`/address/${address._id}`, editedAddress, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
-            onUpdate(response.data.payload); // Actualizar localmente con los datos del backend en AddressList
-            setEditable(false); // Desactivar el modo de edición
+            onUpdate(response.data.payload); 
+            setEditable(false); 
         } catch (error) {
             console.error('Error al actualizar la dirección:', error);
-            // Manejo de errores aquí
+       
         }
     };
 
-    // Efecto para actualizar el estado local cuando la prop address cambia
+
     useEffect(() => {
         setEditedAddress({ ...address });
     }, [address]);

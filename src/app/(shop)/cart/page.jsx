@@ -1,5 +1,7 @@
 import { Cart } from "@/components/cart/Cart"
-export default function () {
+
+
+const CartPage =  () =>  {
 
     return (
         <div>
@@ -8,3 +10,6 @@ export default function () {
         </div>
     )
 }
+
+CartPage.displayName = 'CartPage'
+export default CartPage

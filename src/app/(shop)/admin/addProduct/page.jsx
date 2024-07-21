@@ -1,9 +1,14 @@
 import ProductForm from "@/components/product/ProductForm";
 
-export default function () {
+
+const AddProductPage = () => {
     return (
         <div>
-            <ProductForm />
+            ProductForm
         </div>
-    )
-}
+    );
+};
+
+AddProductPage.displayName = 'AddProductPage';
+
+export default AddProductPage;

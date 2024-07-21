@@ -3,7 +3,7 @@ import { usersStore } from "@/store/ui/user-store";
 const verifyAuthStatus = async () => {
   try {
 
-    const response = await fetch('http://localhost:8080/api/users/auth/verify', {
+    const response = await fetch('https://ecommerce-fullbackend-production.up.railway.app/api/users/auth/verify', {
 
       headers: {
         'Content-Type': 'application/json'

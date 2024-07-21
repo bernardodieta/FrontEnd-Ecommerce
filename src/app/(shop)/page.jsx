@@ -6,7 +6,7 @@ import { useStore } from 'zustand';
 import { usersStore } from '@/store/ui/user-store';
 import verifyAuthStatus from './api/user.js'
 
-export default function Home() {
+const Home = () =>  {
   const [products, setProducts] = useState([]);
 
   const loadUser = useStore(usersStore, (state) => state.loadUser);
@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const result = await axios.get('http://localhost:8080/api/products/');
+        const result = await axios.get('https://ecommerce-fullbackend-production.up.railway.app/api/products/');
         setProducts(result.data.payload.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -31,3 +31,5 @@ export default function Home() {
     </div>
   );
 }
+Home.displayName = 'Home'
+export default Home

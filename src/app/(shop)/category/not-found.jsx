@@ -1,7 +1,10 @@
 import { PageNotFound } from "@/components";
 
-export default function () {
+const NotFoundPage = () => {
     return (
         <PageNotFound />
     )
 }
+
+NotFoundPage.displayName = 'NotFoundPage'
+export default NotFoundPage

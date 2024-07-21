@@ -1,10 +1,13 @@
 import { LoginUsers } from "@/components/login/Login.jsx"
 import Link from "next/link"
 
-export default function () {
+const LoginPage = () => {
   return (
     <div>
       <LoginUsers />     
     </div>
   )
 }
+
+LoginPage.displayName = 'LoginPage'
+export default LoginPage

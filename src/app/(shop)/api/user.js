@@ -6,7 +6,7 @@ import { apiCart } from '@/api/apiCart';
 
 const verifyAuthStatus = async () => {
   try {
-    const response = await axios.get('http://localhost:8080/api/users/auth/verify', { withCredentials: true });
+    const response = await axios.get('https://ecommerce-fullbackend-production.up.railway.app/api/users/auth/verify', { withCredentials: true });
     const { isAuthenticated, user } = response.data;
     //console.log(response.data);
     if (isAuthenticated == true) {

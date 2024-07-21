@@ -10,7 +10,7 @@ export const TopMenu = () => {
     const cart = useCartStore(state => state.cart);
     const dataUser = usersStore(state => state.user);
     
-    // Calcular la cantidad total de productos en el carrito
+
     const totalProductInCart = cart.reduce((total, item) => total + item.quantity, 0);
 
     return (

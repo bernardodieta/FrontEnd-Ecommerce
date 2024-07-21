@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { usersApi } from "@/api/usersApi"; // Asegúrate de que esto apunte a tu configuración de Axios
+import { usersApi } from "@/api/usersApi";
 import { useRouter } from "next/navigation";
 const UserRegisterForm = () => {
     const router = useRouter()

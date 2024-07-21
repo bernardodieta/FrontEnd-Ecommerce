@@ -2,8 +2,23 @@
 // const nextConfig = {};
 
 // export default nextConfig;
+// next.config.mjs
 export default {
-    images: {
-      remotePatterns: ['localhost', 'frontend-ecommerce-production.up.railway.app', 'ecommerce-fullbackend-production.up.railway.app' ], // Agrega 'localhost' como un dominio válido para las imágenes
-    },
-  };
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '3000' // Especifica el puerto si es necesario
+      },
+      {
+        protocol: 'https',
+        hostname: 'frontend-ecommerce-production.up.railway.app'
+      },
+      {
+        protocol: 'https',
+        hostname: 'ecommerce-fullbackend-production.up.railway.app'
+      }
+    ],
+  },
+};
